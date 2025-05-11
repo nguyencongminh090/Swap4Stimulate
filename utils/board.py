@@ -162,5 +162,5 @@ class Board:
         for y in range(15):
             for x in range(15):
                 coord = self.move_to_coord(x, 14 - y)
-                if get_pixel(*coord) == (255, 0, 0):
-                    return coord
+                if get_pixel(*coord) == (0, 0, 255):
+                    return (x, y)

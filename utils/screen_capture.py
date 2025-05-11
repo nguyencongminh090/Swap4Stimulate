@@ -46,13 +46,11 @@ class ScreenCapture(tk.Toplevel):
     with top-left coordinates.
     """
     def __init__(self):
-        """
-        Initialize the screen capture window.
-
-        Args:
-            master: Parent Tkinter application or root window.
-        """
-        super().__init__()
+        """Initialize screen capture window with proper root window management."""
+        self.root       = tk.Tk()
+        self.root.withdraw()  # Hide the root window
+        super().__init__(self.root)  # Initialize Toplevel with root as parent
+        
         self.sct        = mss.mss()
         self.__w        = 0
         self.__h        = 0
@@ -134,29 +132,17 @@ class ScreenCapture(tk.Toplevel):
         self.after(100, self.__screenshot, x1, y1, x2, y2)
 
     def __screenshot(self, x1: int, y1: int, x2: int, y2: int) -> None:
-        """
-        Crop the selected region and close the window.
-
-        Args:
-            x1: Left x-coordinate of the rectangle.
-            y1: Top y-coordinate of the rectangle.
-            x2: Right x-coordinate of the rectangle.
-            y2: Bottom y-coordinate of the rectangle.
-        """
+        """Crop the selected region and quit."""
         if x2 <= x1 or y2 <= y1:
-            self.__img = np.array([])  # Empty image for invalid selection
+            self.__img = np.array([])
         else:
             self.__img = self.__img[y1:y2, x1:x2]
-        self.__img_tk = None  # Clear PhotoImage reference
-        self.destroy()
+        self.__img_tk = None
+        self.quit()
 
     def get(self) -> Tuple[np.ndarray, int, int]:
-        """
-        Wait for the window to close and return the captured image and coordinates.
-
-        Returns:
-            Tuple of (image as numpy array, x-coordinate of top-left, y-coordinate of top-left).
-        """
-        self.wait_window()
-        self.destroy()
+        """Run window and return captured data."""
+        self.mainloop()
+        self.destroy()        # Destroy the Toplevel window
+        self.root.destroy()   # Destroy the root window
         return self.__img, self.__start_x, self.__start_y
