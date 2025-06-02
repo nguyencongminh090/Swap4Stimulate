@@ -1,0 +1,285 @@
+2025-06-02 13:12:41,615 - INFO - Server started on localhost:8888
+2025-06-02 13:13:24,225 - ERROR - Server error: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-06-02 13:13:24,225 - INFO - Server shutdown complete
+2025-06-02 13:13:42,860 - INFO - New connection from ('127.0.0.1', 57481)
+2025-06-02 13:13:42,860 - INFO - Client ('127.0.0.1', 57481) connected. Total clients: 1
+2025-06-02 13:14:19,686 - INFO - New connection from ('127.0.0.1', 57489)
+2025-06-02 13:14:19,694 - INFO - Client ('127.0.0.1', 57489) connected. Total clients: 2
+2025-06-02 13:14:57,548 - INFO - Move added at (7, 12)
+2025-06-02 13:15:00,675 - INFO - Move added at (7, 12)
+2025-06-02 13:15:03,814 - INFO - Move added at (7, 12)
+2025-06-02 13:15:06,947 - INFO - Move added at (7, 12)
+2025-06-02 13:16:02,087 - INFO - Client ('127.0.0.1', 57489) disconnected
+2025-06-02 13:16:02,087 - INFO - Removed client ('127.0.0.1', 57489). Total clients: 1
+2025-06-02 13:16:02,087 - INFO - Connection closed for ('127.0.0.1', 57489)
+2025-06-02 13:16:05,708 - INFO - Client ('127.0.0.1', 57481) disconnected
+2025-06-02 13:16:05,708 - INFO - Removed client ('127.0.0.1', 57481). Total clients: 0
+2025-06-02 13:16:05,708 - INFO - Connection closed for ('127.0.0.1', 57481)
+2025-06-02 16:01:04,565 - INFO - Server started on localhost:8888
+2025-06-02 16:02:24,004 - INFO - New connection from ('127.0.0.1', 51396)
+2025-06-02 16:02:24,004 - INFO - Client ('127.0.0.1', 51396) connected. Total clients: 1
+2025-06-02 16:02:51,844 - INFO - New connection from ('127.0.0.1', 51401)
+2025-06-02 16:02:51,844 - INFO - Client ('127.0.0.1', 51401) connected. Total clients: 2
+2025-06-02 16:04:06,017 - INFO - Client ('127.0.0.1', 51401) disconnected
+2025-06-02 16:04:06,017 - INFO - Removed client ('127.0.0.1', 51401). Total clients: 1
+2025-06-02 16:04:06,017 - INFO - Connection closed for ('127.0.0.1', 51401)
+2025-06-02 16:04:06,958 - INFO - Client ('127.0.0.1', 51396) disconnected
+2025-06-02 16:04:06,958 - INFO - Removed client ('127.0.0.1', 51396). Total clients: 0
+2025-06-02 16:04:06,958 - INFO - Connection closed for ('127.0.0.1', 51396)
+2025-06-02 16:04:31,508 - INFO - New connection from ('127.0.0.1', 51408)
+2025-06-02 16:04:31,508 - INFO - Client ('127.0.0.1', 51408) connected. Total clients: 1
+2025-06-02 16:04:50,991 - INFO - New connection from ('127.0.0.1', 51409)
+2025-06-02 16:04:50,991 - INFO - Client ('127.0.0.1', 51409) connected. Total clients: 2
+2025-06-02 16:08:55,247 - INFO - Client ('127.0.0.1', 51408) disconnected
+2025-06-02 16:08:55,247 - INFO - Removed client ('127.0.0.1', 51408). Total clients: 1
+2025-06-02 16:08:55,247 - INFO - Connection closed for ('127.0.0.1', 51408)
+2025-06-02 16:08:56,997 - INFO - Client ('127.0.0.1', 51409) disconnected
+2025-06-02 16:08:56,997 - INFO - Removed client ('127.0.0.1', 51409). Total clients: 0
+2025-06-02 16:08:56,997 - INFO - Connection closed for ('127.0.0.1', 51409)
+2025-06-02 16:11:19,437 - INFO - Server started on localhost:8888
+2025-06-02 16:12:03,408 - INFO - New connection from ('127.0.0.1', 51459)
+2025-06-02 16:12:03,408 - INFO - Client ('127.0.0.1', 51459) connected. Total clients: 1
+2025-06-02 16:12:23,704 - INFO - New connection from ('127.0.0.1', 51461)
+2025-06-02 16:12:23,704 - INFO - Client ('127.0.0.1', 51461) connected. Total clients: 2
+2025-06-02 16:13:52,715 - INFO - Move added at (7, 12)
+2025-06-02 16:13:55,847 - INFO - Move added at (7, 12)
+2025-06-02 16:13:58,978 - INFO - Move added at (7, 12)
+2025-06-02 16:14:02,104 - INFO - Move added at (7, 12)
+2025-06-02 16:14:05,237 - INFO - Move added at (7, 12)
+2025-06-02 16:14:08,371 - INFO - Move added at (7, 12)
+2025-06-02 16:14:11,507 - INFO - Move added at (7, 12)
+2025-06-02 16:14:14,639 - INFO - Move added at (7, 12)
+2025-06-02 16:14:17,772 - INFO - Move added at (7, 12)
+2025-06-02 16:14:20,898 - INFO - Move added at (7, 12)
+2025-06-02 16:14:21,054 - INFO - Client ('127.0.0.1', 51459) disconnected
+2025-06-02 16:14:21,054 - INFO - Removed client ('127.0.0.1', 51459). Total clients: 1
+2025-06-02 16:14:21,054 - INFO - Connection closed for ('127.0.0.1', 51459)
+2025-06-02 16:14:21,657 - INFO - Client ('127.0.0.1', 51461) disconnected
+2025-06-02 16:14:21,657 - INFO - Removed client ('127.0.0.1', 51461). Total clients: 0
+2025-06-02 16:14:21,658 - INFO - Connection closed for ('127.0.0.1', 51461)
+2025-06-02 17:12:13,952 - INFO - Server started on localhost:8888
+2025-06-02 17:18:07,833 - INFO - New connection from ('127.0.0.1', 55844)
+2025-06-02 17:18:07,833 - INFO - Client ('127.0.0.1', 55844) connected. Total clients: 1
+2025-06-02 17:18:14,059 - INFO - Client ('127.0.0.1', 55844) disconnected
+2025-06-02 17:18:14,059 - INFO - Removed client ('127.0.0.1', 55844). Total clients: 0
+2025-06-02 17:18:14,059 - INFO - Connection closed for ('127.0.0.1', 55844)
+2025-06-02 17:18:16,834 - INFO - New connection from ('127.0.0.1', 55845)
+2025-06-02 17:18:16,834 - INFO - Client ('127.0.0.1', 55845) connected. Total clients: 1
+2025-06-02 17:18:28,880 - INFO - Client ('127.0.0.1', 55845) disconnected
+2025-06-02 17:18:28,880 - INFO - Removed client ('127.0.0.1', 55845). Total clients: 0
+2025-06-02 17:18:28,888 - INFO - Connection closed for ('127.0.0.1', 55845)
+2025-06-02 17:18:55,624 - INFO - New connection from ('127.0.0.1', 55852)
+2025-06-02 17:18:55,624 - INFO - Client ('127.0.0.1', 55852) connected. Total clients: 1
+2025-06-02 17:18:59,412 - INFO - Client ('127.0.0.1', 55852) disconnected
+2025-06-02 17:18:59,412 - INFO - Removed client ('127.0.0.1', 55852). Total clients: 0
+2025-06-02 17:18:59,412 - INFO - Connection closed for ('127.0.0.1', 55852)
+2025-06-02 17:19:02,230 - INFO - New connection from ('127.0.0.1', 55854)
+2025-06-02 17:19:02,230 - INFO - Client ('127.0.0.1', 55854) connected. Total clients: 1
+2025-06-02 17:19:06,765 - INFO - Move added at (7, 12)
+2025-06-02 19:37:26,994 - INFO - Undo 5 moves
+2025-06-02 19:37:39,913 - INFO - Move added at (1, 2)
+2025-06-02 19:37:51,593 - INFO - Client ('127.0.0.1', 55854) disconnected
+2025-06-02 19:37:51,598 - INFO - Removed client ('127.0.0.1', 55854). Total clients: 0
+2025-06-02 19:37:51,598 - INFO - Connection closed for ('127.0.0.1', 55854)
+2025-06-02 19:39:57,203 - INFO - New connection from ('127.0.0.1', 52391)
+2025-06-02 19:39:57,203 - INFO - Client ('127.0.0.1', 52391) connected. Total clients: 1
+2025-06-02 19:40:05,388 - INFO - Client ('127.0.0.1', 52391) disconnected
+2025-06-02 19:40:05,388 - INFO - Removed client ('127.0.0.1', 52391). Total clients: 0
+2025-06-02 19:40:05,396 - INFO - Connection closed for ('127.0.0.1', 52391)
+2025-06-02 19:40:06,918 - INFO - New connection from ('127.0.0.1', 52396)
+2025-06-02 19:40:06,918 - INFO - Client ('127.0.0.1', 52396) connected. Total clients: 1
+2025-06-02 19:40:24,133 - INFO - Client ('127.0.0.1', 52396) disconnected
+2025-06-02 19:40:24,133 - INFO - Removed client ('127.0.0.1', 52396). Total clients: 0
+2025-06-02 19:40:24,133 - INFO - Connection closed for ('127.0.0.1', 52396)
+2025-06-02 19:40:35,147 - INFO - New connection from ('127.0.0.1', 56482)
+2025-06-02 19:40:35,148 - INFO - Client ('127.0.0.1', 56482) connected. Total clients: 1
+2025-06-02 19:40:39,038 - INFO - New connection from ('127.0.0.1', 56484)
+2025-06-02 19:40:39,039 - INFO - Client ('127.0.0.1', 56484) connected. Total clients: 2
+2025-06-02 19:41:04,163 - INFO - Undo 5 moves
+2025-06-02 19:41:38,296 - INFO - Move added at (7, 12)
+2025-06-02 19:41:53,363 - INFO - Client ('127.0.0.1', 56482) disconnected
+2025-06-02 19:41:53,363 - INFO - Removed client ('127.0.0.1', 56482). Total clients: 1
+2025-06-02 19:41:53,363 - INFO - Connection closed for ('127.0.0.1', 56482)
+2025-06-02 19:41:58,078 - INFO - Client ('127.0.0.1', 56484) disconnected
+2025-06-02 19:41:58,078 - INFO - Removed client ('127.0.0.1', 56484). Total clients: 0
+2025-06-02 19:41:58,078 - INFO - Connection closed for ('127.0.0.1', 56484)
+2025-06-02 19:43:01,738 - INFO - New connection from ('127.0.0.1', 56521)
+2025-06-02 19:43:01,738 - INFO - Client ('127.0.0.1', 56521) connected. Total clients: 1
+2025-06-02 19:43:04,053 - INFO - New connection from ('127.0.0.1', 56522)
+2025-06-02 19:43:04,053 - INFO - Client ('127.0.0.1', 56522) connected. Total clients: 2
+2025-06-02 19:43:20,438 - INFO - Move added at (7, 12)
+2025-06-02 19:45:15,818 - INFO - Undo 123 moves
+2025-06-02 19:46:04,583 - INFO - Client ('127.0.0.1', 56521) disconnected
+2025-06-02 19:46:04,583 - INFO - Removed client ('127.0.0.1', 56521). Total clients: 1
+2025-06-02 19:46:04,583 - INFO - Connection closed for ('127.0.0.1', 56521)
+2025-06-02 19:59:48,444 - INFO - Server started on localhost:8888
+2025-06-02 20:00:16,901 - INFO - New connection from ('127.0.0.1', 56731)
+2025-06-02 20:00:16,901 - INFO - Client ('127.0.0.1', 56731) connected. Total clients: 1
+2025-06-02 20:00:38,221 - INFO - New connection from ('127.0.0.1', 56744)
+2025-06-02 20:00:38,221 - INFO - Client ('127.0.0.1', 56744) connected. Total clients: 2
+2025-06-02 20:00:54,252 - INFO - Move added at (7, 12)
+2025-06-02 20:00:57,389 - INFO - Move added at (7, 12)
+2025-06-02 20:01:00,537 - INFO - Move added at (7, 12)
+2025-06-02 20:01:04,921 - INFO - Move added at (7, 12)
+2025-06-02 20:01:08,051 - INFO - Move added at (7, 12)
+2025-06-02 20:01:10,802 - INFO - Client ('127.0.0.1', 56744) disconnected
+2025-06-02 20:01:10,802 - INFO - Removed client ('127.0.0.1', 56744). Total clients: 1
+2025-06-02 20:01:10,802 - INFO - Connection closed for ('127.0.0.1', 56744)
+2025-06-02 20:01:50,638 - INFO - Client ('127.0.0.1', 56731) disconnected
+2025-06-02 20:01:50,638 - INFO - Removed client ('127.0.0.1', 56731). Total clients: 0
+2025-06-02 20:01:50,638 - INFO - Connection closed for ('127.0.0.1', 56731)
+2025-06-02 20:03:56,301 - INFO - Server started on localhost:8888
+2025-06-02 20:04:21,376 - INFO - New connection from ('127.0.0.1', 56766)
+2025-06-02 20:04:21,376 - INFO - Client ('127.0.0.1', 56766) connected. Total clients: 1
+2025-06-02 20:04:38,723 - INFO - New connection from ('127.0.0.1', 56768)
+2025-06-02 20:04:38,723 - INFO - Client ('127.0.0.1', 56768) connected. Total clients: 2
+2025-06-02 20:04:58,132 - INFO - Move added at (7, 12)
+2025-06-02 20:05:52,682 - INFO - Client ('127.0.0.1', 56766) disconnected
+2025-06-02 20:05:52,682 - INFO - Removed client ('127.0.0.1', 56766). Total clients: 1
+2025-06-02 20:05:52,682 - INFO - Connection closed for ('127.0.0.1', 56766)
+2025-06-02 20:05:59,408 - INFO - Client ('127.0.0.1', 56768) disconnected
+2025-06-02 20:05:59,408 - INFO - Removed client ('127.0.0.1', 56768). Total clients: 0
+2025-06-02 20:05:59,412 - INFO - Connection closed for ('127.0.0.1', 56768)
+2025-06-02 20:08:07,974 - INFO - Server started on localhost:8888
+2025-06-02 20:08:21,919 - INFO - New connection from ('127.0.0.1', 56788)
+2025-06-02 20:08:21,919 - INFO - Client ('127.0.0.1', 56788) connected. Total clients: 1
+2025-06-02 20:08:38,019 - INFO - New connection from ('127.0.0.1', 56789)
+2025-06-02 20:08:38,019 - INFO - Client ('127.0.0.1', 56789) connected. Total clients: 2
+2025-06-02 20:08:52,374 - INFO - Move added at (7, 12)
+2025-06-02 20:09:16,154 - INFO - Client ('127.0.0.1', 56788) disconnected
+2025-06-02 20:09:16,154 - INFO - Removed client ('127.0.0.1', 56788). Total clients: 1
+2025-06-02 20:09:16,154 - INFO - Connection closed for ('127.0.0.1', 56788)
+2025-06-02 20:09:16,854 - INFO - Client ('127.0.0.1', 56789) disconnected
+2025-06-02 20:09:16,854 - INFO - Removed client ('127.0.0.1', 56789). Total clients: 0
+2025-06-02 20:09:16,854 - INFO - Connection closed for ('127.0.0.1', 56789)
+2025-06-02 20:15:44,109 - INFO - New connection from ('127.0.0.1', 56850)
+2025-06-02 20:15:44,109 - INFO - Client ('127.0.0.1', 56850) connected. Total clients: 1
+2025-06-02 20:16:03,659 - INFO - New connection from ('127.0.0.1', 56851)
+2025-06-02 20:16:03,659 - INFO - Client ('127.0.0.1', 56851) connected. Total clients: 2
+2025-06-02 20:16:31,994 - INFO - Client ('127.0.0.1', 56850) disconnected
+2025-06-02 20:16:31,994 - INFO - Removed client ('127.0.0.1', 56850). Total clients: 1
+2025-06-02 20:16:31,994 - INFO - Connection closed for ('127.0.0.1', 56850)
+2025-06-02 20:16:35,134 - INFO - New connection from ('127.0.0.1', 56855)
+2025-06-02 20:16:35,134 - INFO - Client ('127.0.0.1', 56855) connected. Total clients: 2
+2025-06-02 20:16:51,264 - INFO - Move added at (7, 12)
+2025-06-02 20:17:19,389 - INFO - Client ('127.0.0.1', 56851) disconnected
+2025-06-02 20:17:19,389 - INFO - Removed client ('127.0.0.1', 56851). Total clients: 1
+2025-06-02 20:17:19,389 - INFO - Connection closed for ('127.0.0.1', 56851)
+2025-06-02 20:17:23,794 - INFO - Client ('127.0.0.1', 56855) disconnected
+2025-06-02 20:17:23,794 - INFO - Removed client ('127.0.0.1', 56855). Total clients: 0
+2025-06-02 20:17:23,794 - INFO - Connection closed for ('127.0.0.1', 56855)
+2025-06-02 20:19:28,403 - INFO - Server started on localhost:8888
+2025-06-02 20:19:30,629 - INFO - New connection from ('127.0.0.1', 56873)
+2025-06-02 20:19:30,629 - INFO - Client ('127.0.0.1', 56873) connected. Total clients: 1
+2025-06-02 20:19:41,514 - INFO - New connection from ('127.0.0.1', 56874)
+2025-06-02 20:19:41,514 - INFO - Client ('127.0.0.1', 56874) connected. Total clients: 2
+2025-06-02 20:20:01,007 - INFO - Move added at (7, 12)
+2025-06-02 20:20:30,895 - INFO - Move added at (13, 12)
+2025-06-02 20:20:53,744 - INFO - Move added at (12, 13)
+2025-06-02 20:21:03,394 - INFO - Move added at (12, 10)
+2025-06-02 20:21:39,614 - INFO - Client ('127.0.0.1', 56873) disconnected
+2025-06-02 20:21:39,614 - INFO - Removed client ('127.0.0.1', 56873). Total clients: 1
+2025-06-02 20:21:39,623 - INFO - Connection closed for ('127.0.0.1', 56873)
+2025-06-02 20:21:50,918 - INFO - New connection from ('127.0.0.1', 56889)
+2025-06-02 20:21:50,918 - INFO - Client ('127.0.0.1', 56889) connected. Total clients: 2
+2025-06-02 20:22:08,253 - INFO - Move added at (6, 7)
+2025-06-02 20:22:54,963 - INFO - Client ('127.0.0.1', 56874) disconnected
+2025-06-02 20:22:54,963 - INFO - Removed client ('127.0.0.1', 56874). Total clients: 1
+2025-06-02 20:22:54,963 - INFO - Connection closed for ('127.0.0.1', 56874)
+2025-06-02 20:22:58,793 - INFO - Client ('127.0.0.1', 56889) disconnected
+2025-06-02 20:22:58,793 - INFO - Removed client ('127.0.0.1', 56889). Total clients: 0
+2025-06-02 20:22:58,793 - INFO - Connection closed for ('127.0.0.1', 56889)
+2025-06-02 20:24:04,258 - INFO - New connection from ('127.0.0.1', 56912)
+2025-06-02 20:24:04,258 - INFO - Client ('127.0.0.1', 56912) connected. Total clients: 1
+2025-06-02 20:24:13,013 - INFO - New connection from ('127.0.0.1', 56914)
+2025-06-02 20:24:13,013 - INFO - Client ('127.0.0.1', 56914) connected. Total clients: 2
+2025-06-02 20:24:32,498 - INFO - Move added at (7, 12)
+2025-06-02 20:24:51,038 - INFO - Move added at (13, 12)
+2025-06-02 20:24:59,268 - INFO - Client ('127.0.0.1', 56912) disconnected
+2025-06-02 20:24:59,275 - INFO - Removed client ('127.0.0.1', 56912). Total clients: 1
+2025-06-02 20:24:59,275 - INFO - Connection closed for ('127.0.0.1', 56912)
+2025-06-02 20:26:17,390 - INFO - New connection from ('127.0.0.1', 56922)
+2025-06-02 20:26:17,390 - INFO - Client ('127.0.0.1', 56922) connected. Total clients: 2
+2025-06-02 20:26:31,279 - INFO - Move added at (7, 12)
+2025-06-02 20:27:12,909 - INFO - Client ('127.0.0.1', 56922) disconnected
+2025-06-02 20:27:12,909 - INFO - Removed client ('127.0.0.1', 56922). Total clients: 1
+2025-06-02 20:27:12,918 - INFO - Connection closed for ('127.0.0.1', 56922)
+2025-06-02 20:33:09,139 - INFO - New connection from ('127.0.0.1', 57031)
+2025-06-02 20:33:09,139 - INFO - Client ('127.0.0.1', 57031) connected. Total clients: 2
+2025-06-02 20:33:29,469 - INFO - Move added at (7, 12)
+2025-06-02 20:33:30,129 - INFO - Move added at (7, 2)
+2025-06-02 20:33:40,759 - INFO - Move added at (8, 9)
+2025-06-02 20:33:43,179 - INFO - Move added at (9, 9)
+2025-06-02 20:34:01,969 - INFO - Move added at (7, 7)
+2025-06-02 20:34:31,859 - INFO - Move added at (13, 13)
+2025-06-02 20:43:17,073 - INFO - Client ('127.0.0.1', 57031) disconnected
+2025-06-02 20:43:17,083 - INFO - Removed client ('127.0.0.1', 57031). Total clients: 1
+2025-06-02 20:43:17,083 - INFO - Connection closed for ('127.0.0.1', 57031)
+2025-06-02 20:45:13,945 - INFO - New connection from ('127.0.0.1', 57138)
+2025-06-02 20:45:13,945 - INFO - Client ('127.0.0.1', 57138) connected. Total clients: 2
+2025-06-02 20:45:39,210 - WARNING - Rejected connection from ('127.0.0.1', 57153): Game full
+2025-06-02 20:46:06,711 - INFO - Move added at (7, 2)
+2025-06-02 20:46:39,641 - WARNING - Rejected connection from ('127.0.0.1', 57157): Game full
+2025-06-02 20:47:05,191 - INFO - Client ('127.0.0.1', 56914) disconnected
+2025-06-02 20:47:05,191 - INFO - Removed client ('127.0.0.1', 56914). Total clients: 1
+2025-06-02 20:47:05,191 - INFO - Connection closed for ('127.0.0.1', 56914)
+2025-06-02 20:47:26,711 - INFO - New connection from ('127.0.0.1', 57160)
+2025-06-02 20:47:26,711 - INFO - Client ('127.0.0.1', 57160) connected. Total clients: 2
+2025-06-02 20:47:42,475 - INFO - Client ('127.0.0.1', 57138) disconnected
+2025-06-02 20:47:42,475 - INFO - Removed client ('127.0.0.1', 57138). Total clients: 1
+2025-06-02 20:47:42,475 - INFO - Connection closed for ('127.0.0.1', 57138)
+2025-06-02 20:48:01,446 - INFO - New connection from ('127.0.0.1', 57161)
+2025-06-02 20:48:01,446 - INFO - Client ('127.0.0.1', 57161) connected. Total clients: 2
+2025-06-02 20:48:22,405 - INFO - Move added at (7, 2)
+2025-06-02 20:48:28,651 - INFO - Move added at (6, 2)
+2025-06-02 20:48:28,701 - INFO - Move added at (7, 12)
+2025-06-02 20:48:41,265 - INFO - Move added at (8, 12)
+2025-06-02 20:48:43,914 - INFO - Move added at (5, 3)
+2025-06-02 20:48:51,691 - INFO - Move added at (6, 5)
+2025-06-02 20:48:53,031 - INFO - Move added at (8, 2)
+2025-06-02 20:48:53,081 - INFO - Move added at (9, 8)
+2025-06-02 20:48:58,370 - INFO - Move added at (7, 10)
+2025-06-02 20:49:04,111 - INFO - Move added at (5, 11)
+2025-06-02 20:49:08,841 - INFO - Move added at (5, 9)
+2025-06-02 20:49:14,422 - INFO - Move added at (8, 6)
+2025-06-02 20:49:28,601 - INFO - Move added at (4, 11)
+2025-06-02 20:49:32,936 - INFO - Move added at (8, 8)
+2025-06-02 20:49:36,601 - INFO - Move added at (0, 14)
+2025-06-02 20:49:38,899 - INFO - Move added at (7, 4)
+2025-06-02 20:49:44,045 - INFO - Move added at (14, 14)
+2025-06-02 20:49:52,121 - INFO - Move added at (14, 0)
+2025-06-02 20:49:58,561 - INFO - Move added at (11, 0)
+2025-06-02 20:50:01,310 - INFO - Move added at (5, 5)
+2025-06-02 20:50:03,011 - INFO - Move added at (4, 3)
+2025-06-02 20:50:05,892 - INFO - Move added at (11, 14)
+2025-06-02 20:50:13,731 - INFO - Move added at (7, 0)
+2025-06-02 20:50:16,920 - INFO - Move added at (14, 7)
+2025-06-02 20:50:17,471 - INFO - Move added at (14, 0)
+2025-06-02 20:50:25,631 - INFO - Move added at (12, 7)
+2025-06-02 20:50:33,741 - INFO - Move added at (7, 7)
+2025-06-02 20:50:41,044 - INFO - Move added at (7, 14)
+2025-06-02 20:50:46,779 - INFO - Move added at (3, 3)
+2025-06-02 20:50:55,687 - INFO - Move added at (3, 7)
+2025-06-02 20:51:01,354 - INFO - Move added at (3, 11)
+2025-06-02 20:51:02,741 - INFO - Move added at (11, 3)
+2025-06-02 20:51:20,499 - INFO - Move added at (13, 12)
+2025-06-02 20:51:26,526 - INFO - Move added at (4, 6)
+2025-06-02 20:51:30,716 - INFO - Move added at (4, 8)
+2025-06-02 20:51:35,507 - INFO - Move added at (9, 5)
+2025-06-02 20:51:40,407 - INFO - Move added at (10, 9)
+2025-06-02 20:52:23,797 - INFO - Move added at (6, 8)
+2025-06-02 20:52:25,297 - INFO - Move added at (13, 2)
+2025-06-02 20:52:26,707 - INFO - Move added at (12, 5)
+2025-06-02 20:52:32,910 - INFO - Move added at (6, 6)
+2025-06-02 20:52:43,627 - INFO - Move added at (7, 6)
+2025-06-02 20:52:46,517 - INFO - Move added at (10, 5)
+2025-06-02 20:52:47,876 - INFO - Move added at (7, 8)
+2025-06-02 20:52:51,459 - INFO - Move added at (12, 9)
+2025-06-02 20:53:13,746 - INFO - Move added at (8, 7)
+2025-06-02 20:53:20,096 - INFO - Move added at (6, 7)
+2025-06-02 20:53:46,956 - INFO - Client ('127.0.0.1', 57161) disconnected
+2025-06-02 20:53:46,956 - INFO - Removed client ('127.0.0.1', 57161). Total clients: 1
+2025-06-02 20:53:46,956 - INFO - Connection closed for ('127.0.0.1', 57161)
+2025-06-02 20:53:48,827 - INFO - Client ('127.0.0.1', 57160) disconnected
+2025-06-02 20:53:48,827 - INFO - Removed client ('127.0.0.1', 57160). Total clients: 0
+2025-06-02 20:53:48,827 - INFO - Connection closed for ('127.0.0.1', 57160)

@@ -132,7 +132,7 @@ class ClientHandler:
                 elif data_type == DataType.UNDO and content_length == UNDO_CONTENT_SIZE:
                     num_moves = struct.unpack(UNDO_CONTENT_FORMAT, content)[0]
                     self.game.undo_moves(num_moves)
-                    logging.info(f"Undid {num_moves} moves")
+                    logging.info(f"Undo {num_moves} moves")
                     self.server.broadcast(self.addr, data_type, content)
 
                 elif data_type == DataType.SWAP and content_length == SWAP_CONTENT_SIZE:

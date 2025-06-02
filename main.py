@@ -44,10 +44,16 @@ class SocketClient:
         self.__lock         = Lock()
         self.connect()
 
+    @property
+    def is_connected(self) -> bool:
+        """Thread-safe way to check connection status"""
+        with self.__lock:
+            return self.__is_connected and self.socket is not None
+
     def connect(self) -> bool:
         """Attempt to connect to the server."""
         with self.__lock:
-            if self.__is_connected:
+            if self.__is_connected and self.socket is not None:
                 return True
             
             try:
@@ -59,6 +65,12 @@ class SocketClient:
             except Exception as e:
                 print(f"Connection failed: {e}")
                 self.__is_connected = False
+                if self.socket:
+                    try:
+                        self.socket.close()
+                    except:
+                        pass
+                self.socket = None
                 return False
 
     def _recv_all(self, n):
@@ -76,14 +88,14 @@ class SocketClient:
 
     def send(self, *args):
         print('Sending...')
-        if not self.__is_connected:
-            print('if not self.is_connected')
-            return None
+        if not self.is_connected:
+            print('Not connected')
+            return False
         
         try:
             if not args:
                 print("Error: send called with no arguments.")
-                return None
+                return False
             
             data_type_enum  = args[0]
             data_type_value = data_type_enum.value
@@ -92,37 +104,44 @@ class SocketClient:
             content_length  = 0
             content_format  = ''
 
-            print(f'Type: {data_type_enum} | Value: {data_type_value} | Content: {content_args}')
+            print(f'Type: {data_type_enum} | Value: {data_type_value} | Content: {content_args[0]}')
 
             # Pack content based on DataType
             if data_type_enum   == DataType.ADD:
                 if len(content_args) != 1 or not isinstance(content_args[0], tuple) or len(content_args[0]) != 2:
                     print(f"Error: DataType.ADD requires one tuple (x, y), received {content_args}")
-                    return None
+                    return False
                 x, y = content_args[0]
+                # Validate coordinates
+                if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+                    print(f"Error: Coordinates must be numbers, received x={x}, y={y}")
+                    return False
                 try:
                     packed_content = struct.pack(ADD_CONTENT_FORMAT, int(x), int(y))
                     content_length = ADD_CONTENT_SIZE
                     content_format = ADD_CONTENT_FORMAT
                 except (TypeError, ValueError) as e:
                     print(f"Error: Could not pack ADD content {content_args}. {e}")
-                    return None
+                    return False
             elif data_type_enum == DataType.UNDO:
                 if len(content_args) != 1 or not isinstance(content_args[0], int):
                     print(f"Error: DataType.UNDO requires one integer (num_undone), received {content_args}")
-                    return None
+                    return False
                 num_undone         = content_args[0]
+                if num_undone < 0:
+                    print(f"Error: Number of moves to undo must be positive, received {num_undone}")
+                    return False
                 try:
                     packed_content = struct.pack(UNDO_CONTENT_FORMAT, num_undone)
                     content_length = UNDO_CONTENT_SIZE
                     content_format = UNDO_CONTENT_FORMAT
                 except (TypeError, ValueError) as e:
                     print(f"Error: Could not pack UNDO content {content_args}. Requires integer. {e}")
-                    return None            
+                    return False            
             elif data_type_enum == DataType.SWAP:
                 if len(content_args) != 1 or not isinstance(content_args[0], bool):
                     print(f"Error: DataType.SWAP requires one boolean argument, received {content_args}")
-                    return None
+                    return False
                 turn_state         = content_args[0]
                 try:
                     packed_content = struct.pack(SWAP_CONTENT_FORMAT, turn_state)
@@ -130,7 +149,7 @@ class SocketClient:
                     content_format = SWAP_CONTENT_FORMAT
                 except (TypeError, ValueError) as e:
                     print(f"Error: Could not pack SWAP content {content_args}. {e}")
-                    return None
+                    return False
             elif data_type_enum == DataType.CLEAR:
                 if len(content_args) != 0:
                     print(f"Warning: DataType.CLEAR expects no content, but received {content_args}")
@@ -141,18 +160,23 @@ class SocketClient:
             message                = header + packed_content
 
             print('Message:', message)
-
-            self.socket.send(message)
+            
+            # Use sendall to ensure entire message is sent
+            self.socket.sendall(message)
             print('Sent:', message)
             return True
         except socket.error as e:
             print(f'Socket send error: {e}')
-            self.__is_connected = False
-            self.close()
+            with self.__lock:
+                self.__is_connected = False
+                self.close()
+            return False
+        except Exception as e:
+            print(f'Unexpected error: {e}')
             return False
 
     def receive(self):
-        if not self.__is_connected:
+        if not self.is_connected:
             return None
         
         try:
@@ -165,7 +189,17 @@ class SocketClient:
                     self.close()
                 return None
             
+            print(f'HeaderSize: {len(header_bytes)}')
+            
             data_type_value, content_length = struct.unpack(HEADER_FORMAT, header_bytes)
+
+            print('Data:', data_type_value, content_length)
+            
+            # Validate content length before receiving
+            if content_length < 0:
+                print(f'Invalid content length: {content_length}')
+                return None
+            
             content_bytes = b''
             if content_length > 0:
                 content_bytes = self._recv_all(content_length)
@@ -193,6 +227,9 @@ class SocketClient:
                 unpacked_content = struct.unpack(SWAP_CONTENT_FORMAT, content_bytes)[0]
             elif data_type_enum == DataType.CLEAR:
                 unpacked_content = None
+            else:
+                print(f'Unexpected content length {content_length} for data type {data_type_enum}')
+                return None
             
             return data_type_enum, unpacked_content
         except socket.error as e:
@@ -203,9 +240,6 @@ class SocketClient:
             return None
         except Exception as e:
             print(f'Unexpected error: {e}')
-            with self.__lock:
-                self.__is_connected = False
-                self.close()
             return None
 
     def close(self):
@@ -284,7 +318,7 @@ class Game:
         self.__board            : Board        = board
         self.__listener         : Listener     = Listener()
         self.__game_state                      = Event()
-        self.__lock_turn                       = False    
+        self.__lock_turn                       = False if input('B/W').lower() == 'b' else True    
         self.__new_game                        = True
         self.__swap_pending                    = False
         self.__moves_until_swap                = 3
@@ -351,12 +385,16 @@ class Game:
         print('Sync')    
         if self.__lock_turn:
             # Get data outside lock
+            print('---Get Data---')
             received_data = self.__client.receive()
+            print('---Raw Data---', received_data)
             if received_data is None:
                 print('Sync: Failed to receive data from server.')
                 return
             
             received_type, parsed_content = received_data
+            print(f'Received Data: {received_data}')
+
 
             if received_type == DataType.ADD:
                 move     = parsed_content
@@ -367,24 +405,26 @@ class Game:
 
                 cur_mouse_position = get_mouse_position()
                 self.__lock_turn = False
-                self.__board.click(*move)
+                self.__board.click(*self.__board.move_to_coord(*move))
                 self.__moves.append(move)
                 mouse_move_to(*cur_mouse_position)
         else:
             print('Lock Release')
             # Get move outside lock
             move = self.__recursive_get_move()
-            print(move)
+
+            if move and move not in self.__moves:
+                print(f'Append {move} | Len: {len(self.__moves)}')
+                self.__moves.append(move)
             
-            self.__lock_turn ^= not swap2
-            self.__moves.append(move)
+                self.__lock_turn ^= not swap2
+                    
+                # Send data outside lock 
+                status = self.__client.send(DataType.ADD, move)
+                print('Send Status:', status)
                 
-            # Send data outside lock    
-            status = self.__client.send(DataType.ADD, move)
-            print('Send Status:', status)
-            
-            if not swap2 and len(self.__moves) == self.__moves_until_swap:
-                self.__swap_pending = True
+                if not swap2 and len(self.__moves) == self.__moves_until_swap:
+                    self.__swap_pending = True
 
     def ask_swap2(self):
         if not self.__swap_pending:
@@ -445,7 +485,7 @@ class Game:
                 listener.add_hotkey('alt+r', self.reset_game)
                 listener.add_hotkey('alt+p', self.manager)
     
-                self.__background_thread.start()
+                # self.__background_thread.start()
 
                 while not listener._stop_event.is_set():
                     time.sleep(0.1)
@@ -474,8 +514,8 @@ class Controller:
             
             self._board_game                 = Board((self._detected_board[0], self._detected_board[1]),
                                                      (self._detected_board[2], self._detected_board[3]), 15, 15)
-            mouse_clip(self._detected_board[0]                          , self._detected_board[1], 
-                       self._detected_board[0] + self._detected_board[2], self._detected_board[1] + self._detected_board[3])
+            # mouse_clip(self._detected_board[0]                          , self._detected_board[1], 
+            #            self._detected_board[0] + self._detected_board[2], self._detected_board[1] + self._detected_board[3])
         except Exception as e:
             print(f"Error selecting board: {e}")
             self.cleanup()

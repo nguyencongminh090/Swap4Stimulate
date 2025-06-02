@@ -141,7 +141,7 @@ class Board:
             Tuple of (screen_x, screen_y) coordinates.
         """
         screen_x    = self.__x1 + round(x * self.__dis_x)
-        screen_y    = self.__y1 + round((14 - y) * self.__dis_y)
+        screen_y    = self.__y1 + round(y * self.__dis_y)
         return screen_x, screen_y
 
     def set_pos(self, move_string: str) -> None:
